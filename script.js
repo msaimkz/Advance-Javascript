@@ -1,3 +1,4 @@
+import { message,name,csl} from "./module.js"
 
 //Spread Operator
 let num = [1,2,3,4,5,6]
@@ -24,8 +25,18 @@ data("Abdullah","Faris","Matric",2022);
 
 // Task 
 let number = [12,5,15,20,8]
-const sum = ()=>{
+const sum = (a,b,c,d,e)=>{
+// alert(a+b+c+d+e)
 }
-sum(12,5,15,20,8);
- 
+sum(...number);
 // Task 
+
+// module 
+message();
+
+console.log(name)
+
+csl();
+
+// module 
+
