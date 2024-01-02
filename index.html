@@ -5,8 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+<style>
+  body{
+    display: flex;
+    gap: 70px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  img{
+    border-radius: 20px;
+  }
+  div{
+    display: flex;
+    gap: 30px;
+  }
+  div img{
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+  }
+</style>
 <body>
-  
+  <img src="./pexels-isaac-taylor-2119758.jpg" alt="" width="300px" height="300px" id="img">
+
+  <div>
+    <img src="./pexels-engin-akyurt-2725744.jpg" alt="" onmouseover="imghover(this)" onmouseleave="imgleave()">
+    <img src="./pexels-robin-stickel-70497.jpg" alt="" onmouseover="imghover(this)" onmouseleave="imgleave()">
+    <img src="./pexels-valeria-boltneva-1639565.jpg" alt="" onmouseover="imghover(this)" onmouseleave="imgleave()">
+  </div>
+
+  <script>
+  let img =document.querySelector("#img")
+  let div =document.querySelector("div img")
+
+  function imghover(a){
+     let data=a.getAttribute("src")
+     img.setAttribute("src",data)
+  }
+  function imgleave(){
+    img.setAttribute("src","./pexels-isaac-taylor-2119758.jpg") 
+  }
+  </script>
+
   <script src="./script.js"></script>
 </body>
 </html>
