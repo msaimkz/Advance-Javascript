@@ -5,21 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<body>
-  
-  <input type="search"  id="search">
-  <button>Add</button>
-  <ul>
-  </ul>
+<style>
+  .todo{
+    width: 400px;
+    height: inherit;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
 
-  <script>
-    let input=document.querySelector("#search")
-document.querySelector("button").addEventListener('click',function(){
-  document.querySelector("ul").innerHTML+=`
-  <li>${input.value}</li>
-  `
-})
-    
-  </script>
+  }
+  .todo h1{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .todo input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .todo button{
+    width: 80px;
+    height: 30px;
+  }
+.list{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+  
+}
+.list button{
+  margin-right: 10px;
+}
+#item{
+  border: 1px solid black;
+  width: 90%;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-self: center;
+}
+</style>
+<body>
+  <div class="todo">
+    <h1>Todo</h1>
+    <input type="search"  id="add"> <button class="add">Add</button>
+    <div class="list">
+      <!-- <div id="item">
+      <p>task1</p> <div><button onclick="del()">Delete</button> <button onclick="edit()">Edit</button></div>
+    </div> -->
+    </div>
+  </div>
+  <script src="./script.js"></script>
 </body>
 </html>
