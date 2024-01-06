@@ -7,7 +7,19 @@
 </head>
 <body>
   
+  <input type="search"  id="search">
+  <button>Add</button>
+  <ul>
+  </ul>
 
-  <script src="./script.js"></script>
+  <script>
+    let input=document.querySelector("#search")
+document.querySelector("button").addEventListener('click',function(){
+  document.querySelector("ul").innerHTML+=`
+  <li>${input.value}</li>
+  `
+})
+    
+  </script>
 </body>
 </html>
