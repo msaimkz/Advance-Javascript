@@ -6,6 +6,11 @@
   <title>Document</title>
 </head>
 <style>
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .todo{
     width: 400px;
     height: inherit;
@@ -34,6 +39,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  gap: 10px;
   padding: 10px;
   
 }
@@ -51,12 +57,10 @@
 </style>
 <body>
   <div class="todo">
-    <h1>Todo</h1>
-    <input type="search"  id="add"> <button class="add">Add</button>
+    <h1 contenteditable="true">Todo</h1>
+    <input type="search"  id="add" required> <button class="add">Add</button>
     <div class="list">
-      <!-- <div id="item">
-      <p>task1</p> <div><button onclick="del()">Delete</button> <button onclick="edit()">Edit</button></div>
-    </div> -->
+     
     </div>
   </div>
   <script src="./script.js"></script>
