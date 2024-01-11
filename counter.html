@@ -10,24 +10,34 @@
 <button onclick="add()">Add</button>
 <button onclick="sub()">Sub</button>
 <button onclick="reset()">Reset</button>
+<button onclick="rese()">Rese</button>
+<h2></h2>
 
 <script>
   let value=document.querySelector("h1")
+  let value2=document.querySelector("h2")
+var count= 0
 
-var count= 1
   function add(){
     count =count+1
     value.innerHTML= count
   }
   function sub(){
     count =count-1
+    if(count<0){
+      count = 0;
+  }
    value.innerHTML= count
+   
   } 
   function reset(){
     count=0
     value.innerHTML=count
    } 
-  
+   function rese(){
+   console.log(count)
+   } 
+   
 </script>
 </body>
 </html>
